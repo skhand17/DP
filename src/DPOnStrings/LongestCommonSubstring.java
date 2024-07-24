@@ -6,8 +6,8 @@ public class LongestCommonSubstring {
 
     public static void main(String[] args) {
 
-        String text1 = "abcd";
-        String text2 = "abzd";
+        String text1 = "abcjklp";
+        String text2 = "acjkp";
 
 
         int length = longestCommonSubstring(text1, text2);
@@ -42,6 +42,13 @@ public class LongestCommonSubstring {
                     dp[i][j] = 0;
                 }
             }
+        }
+
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<=m; j++){
+                System.out.print(dp[i][j] + " ");
+            }
+            System.out.println();
         }
 
         int max = Integer.MIN_VALUE;

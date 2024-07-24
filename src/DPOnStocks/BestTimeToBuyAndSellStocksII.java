@@ -7,7 +7,7 @@ public class BestTimeToBuyAndSellStocksII {
     public static void main(String[] args) {
 
         int[] prices = new int[]{7, 1, 5, 3, 6, 4};
-        System.out.println(maxProfit(prices));
+//        System.out.println(maxProfit(prices));
 
         System.out.println(profitMaximaTab(prices, prices.length));
 //        System.out.println(profitMaximaTabSpaceOptimization(prices, prices.length));
@@ -61,6 +61,13 @@ public class BestTimeToBuyAndSellStocksII {
                 }
                 dp[index][b] = profit;
             }
+        }
+
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<=1; j++){
+                System.out.print(dp[i][j] + " ");
+            }
+            System.out.println();
         }
         return dp[0][1];
     }
